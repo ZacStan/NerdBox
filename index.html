@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>NerdBox</title>
+	<meta name="description" content="NerdBox is a Modded of Beepbox, an online tool for sketching and sharing chiptune melodies, and was created by Green Guy. " />
+	<meta name="keywords" content="chiptune, music, melody, composition, tool, square wave, NES, NSF, BeepBox, beepbox, NerdBox, nerdbox, modded nerdbox" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <link rel="manifest" href="/manifest.webmanifest" /> -->
+	<style type="text/css">
+		body {
+			margin: auto;
+			background: #000;
+			font-family: sans-serif;
+			font-size: large;
+			line-height: 1.3;
+			color: #fff;
+		}
+		h1 {
+			font-size: 30px;
+			text-align: center;
+		}
+		.centerDiv {
+			margin: 0px auto;
+		}
+		a {
+			color: #98f;
+		}
+		#beepboxEditorContainer {
+			min-height: 645px;
+		}
+		
+		/* wide screen */
+		@media (min-width: 701px) {
+			body {
+				width: 700px;
+			}
+			.column-container {
+				display: flex;
+				justify-content: space-between;
+			}
+			.instructions-column {
+				width: 375px;
+			}
+			.twitter-column {
+				width: 300px;
+			}
+		}
+		
+		/* narrow screen */
+		@media (max-width: 700px) {
+			body {
+				width: 100vw;
+			}
+			.column-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div id="beepboxEditorContainer"></div>
+	
+	<h1>
+		NerdBox BETA
+	</h1>
+	<p id="introduction">
+		NerdBox is a Modded of Beepbox, an online tool for sketching and sharing chiptune melodies, and was created by Green Guy. 
+	</p>
+	<p>
+		All song data is packaged into the URL at the top of your browser. 
+		When you make changes to the song, the URL is updated to reflect your changes. 
+		When you are satisfied with your song, just copy and paste the URL to save and share your song! 
+	</p>
+	<p>
+		Big thanks to the makers of ModBox and Sandbox, because they were my inspiration and help for this project!
+	</p>
+	
+	<div class="column-container">
+		<div class="instructions-column">
+			<h1>
+				Instructions
+			</h1>
+			<p>
+				You can add or remove notes by clicking on the gray rows at the top. 
+				BeepBox automatically plays the notes out loud for you. Try it!
+			</p>
+			<p>
+				Notes go into patterns, and you can edit one pattern at a time.
+				Those numbered boxes at the bottom of the editor are the different patterns you can edit.
+				<span id="bar-editing">
+					Click the other boxes to move to a different part of the song, or click the arrows on the currently selected box to swap which pattern is played during that part of the song.
+				</span>
+			</p>
+			<p>
+				There are four rows of patterns that Nerdbox can play simultaneously, and each row has its own set of patterns. 
+				The first three rows can play melodies and the bottom row is for drums.
+				Of course, this is only at its default setting.
+			</p>
+			<p>
+				The purple loop underneath the numbered boxes controls which part of the song is currently repeating. 
+				Move the loop to listen to a different part of the song, or drag the ends to expand the loop to include the whole song. 
+			</p>
+			<div id="keyboard-instructions">
+				<p>
+					When NerdBox has focus (click on its interface above), you can use these keyboard shortcuts: <br/>
+				</p>
+				<ul>
+					<li>Spacebar: Pause or Resume</li>
+					<li>Z: Undo</li>
+					<li>Y or Shift Z: Redo</li>
+					<li>C: Copy the current pattern</li>
+					<li>V: Paste the current pattern</li>
+					<li>[ ]: Move the playhead backward and forward</li>
+					<li>Arrow Keys: Change which bar is selected</li>
+					<li>1-8: Reassign a pattern to the currently selected bar</li>
+				</ul>
+			</div>
+			<p>
+				In the pattern editor, you can click and drag horizontally on a note to adjust its duration.
+				You can also click above or below an existing note to enable a rapid arpeggio/trill effect, oscillating between two or more simultaneous notes. 
+			</p>
+			<p>
+				ADVANCED: Drag vertically from an existing note to bend its pitch, or drag vertically from above or below the note to adjust its volume.
+			</p>
+			<p>
+				Nerdbox has many more features. 
+				Try playing with the buttons and menus on the right side to find out what it can do!
+			</p>
+			<h1>
+				About
+			</h1>
+			<p>
+				BeepBox is developed by <a href="http://www.johnnesky.com">John Nesky</a>, also known as <a href="https://twitter.com/shaktool">@shaktool</a>. 
+			</p>
+			<p>
+				NerdBox is developed by Zac Stanislawski, also known Green Guy#5295
+			</p>
+			<p>
+				NerdBox does not claim ownership over songs created with it, so original songs belong to their authors. 
+			</p>
+			<p>
+				Neither Zac Stanislawski nor NerdBox assume responsibility for any copyrighted material played on NerdBox. No songs are ever received, recorded, or distributed by NerdBox's servers. All song data is contained in the URL after the hash (#) mark, and NerdBox running inside your browser converts that data into sound waves.
+			</p>
+		</div>
+		<div class="twitter-column">
+			<h1>
+				Shared on Twitter:
+			</h1>
+			<a class="twitter-timeline" width="300" data-tweet-limit="13" data-link-color="#9988ff" data-chrome="noheader nofooter transparent" data-dnt="true" href="https://twitter.com/search?q=beepbox.co" data-widget-id="418501337848889345">Tweets about "beepbox.co"</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</div>
+	</div>
+	
+	<h1>
+		Change Log
+	</h1>
+	<p id="introduction">
+		2/15/17 - NerdBox BETA released.
+	</p>
+	
+	<!--
+	Instead of loading js beepbox editor interface directly, test for browser support.
+	<script type="text/javascript" src="beepbox_editor.min.js"></script>
+	-->
+	<script type="text/javascript">
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|android|ipad|playbook|silk/i.test(navigator.userAgent) ) {
+	document.getElementById("introduction").innerHTML = "BeepBox is an online tool for sketching and sharing chiptune melodies. Make sure that your volume is turned up, then press the play button!";
+	document.getElementById("keyboard-instructions").style.display = "none";
+	document.getElementById("bar-editing").innerHTML = "Tap the other boxes to move to a different part of the song, or tap on the currently selected box to swap which pattern is played during that part of the song.";
+}
+
+var hasAudioContext = (window.AudioContext || window.webkitAudioContext || window.mozAudioContext || window.oAudioContext || window.msAudioContext);
+if (hasAudioContext) {
+	// Go ahead and load js beepbox editor interface:
+	var fileref = document.createElement("script");
+	fileref.setAttribute("type", "text/javascript");
+	fileref.setAttribute("src", "beepbox_editor.min.js");
+	document.head.appendChild(fileref);
+} else {
+	document.getElementById("beepboxEditorContainer").innerHTML = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=11,0,0,0" width="700" height="645" id="BeepBox" align="middle"><param name="allowScriptAccess" value="always" /><param name="movie" value="BeepBoxOnline.swf" /><param name="quality" value="high" /><param name="bgcolor" value="#000000" /><embed src="BeepBoxOnline.swf" quality="high" bgcolor="#000000" width="700" height="645" name="BeepBox" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>';
+	
+	var hashInterval = null;
+	var myhash = "**blank**";
+	
+	function getFlashMovieObject(movieName) {
+		if (window.document[movieName])  {
+			return window.document[movieName];
+		}
+		if (navigator.appName.indexOf("Microsoft Internet")==-1) {
+			if (document.embeds && document.embeds[movieName])
+				return document.embeds[movieName]; 
+		} else // if (navigator.appName.indexOf("Microsoft Internet")!=-1)
+		{
+			return document.getElementById(movieName);
+		}
+	}
+	
+	function pageDidLoad() {
+		hashInterval = setInterval('checkHash()', 100);
+	}
+	
+	function checkHash() {
+		if (myhash != location.hash) {
+			var flashMovie = getFlashMovieObject("BeepBox");
+			if (flashMovie && flashMovie.hashUpdatedExternally) {
+				myhash = location.hash;
+				flashMovie.hashUpdatedExternally(myhash);
+			}
+		}
+	}
+	
+	function documentUpdated(message) {
+		if (location.hash != message) {
+			location.hash = message;
+			myhash = message;
+		}
+	}
+	
+	hashInterval = setInterval('checkHash()', 100);
+}
+
+</script>
+</body></html>
