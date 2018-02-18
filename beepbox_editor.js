@@ -229,7 +229,7 @@ var nerdbox;
     Config.partNames = ["÷2 (quavers)", "÷3 (triplets)", "÷4 (semiquavers)", "÷5 (quintuplets)", "÷6 (sextuplets)", "÷7 (septuplet)", "÷8 (demisemiquavers)", "÷9 (nontuplet)", "÷12 (duodectuplets)", "÷16 (hemidemisemiquavers)", "÷24 (quattuorvigintuplets)", "÷32 (semihemidemisemiquavers)", "÷nothing (freehand)"];
     Config.partCounts = [2, 3, 4, 5, 6, 7, 8, 9, 12, 16, 24, 32, 999];
     Config.waveNames = ["triangle", "square", "pulse wide", "pulse narrow", "sawtooth", "double saw", "double pulse", "spiky", "plateau", "unnamed 1", "unnamed 2"];
-    Config.waveVolumes = [1.0, 0.5, 0.5, 0.5, 0.65, 0.5, 0.4, 0.4, 0.94, 0.3, 1.0];
+    Config.waveVolumes = [1.0, 0.5, 0.5, 0.5, 0.65, 0.5, 0.4, 0.4, 0.94, 0.3, 0.02];
     Config.drumNames = ["retro", "white", "clang", "buzz", "hollow"];
     Config.drumVolumes = [0.25, 1.0, 0.4, 0.3, 1.5];
     Config.drumPitchRoots = [69, 69, 69, 69, 96];
@@ -6483,7 +6483,7 @@ var nerdbox;
             this.mainLayer = div({ className: "beepboxEditor", tabIndex: "0" }, [
                 this._editorBox,
                 div({ className: "editor-widget-column" }, [
-                    div({ style: "text-align: center; color: #999;" }, [text("NerdBox 1.0")]),
+                    div({ style: "text-align: center; color: #999;" }, [text("NerdBox BETA")]),
                     div({ className: "editor-widgets" }, [
                         div({ className: "editor-controls" }, [
                             div({ className: "playback-controls" }, [
