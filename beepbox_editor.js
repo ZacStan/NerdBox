@@ -191,7 +191,7 @@ var nerdbox;
         };
         return Config;
     }());
-    Config.scaleNames = ["Ionian (major)", "Dorian", "Phrygian", "Lydian", "Mixolydian", "Aolian (minor)", "Locrian", "expert"];
+    Config.scaleNames = ["Ionian (Major) :)", "Dorian :(", "Phrygian :(", "Lydian :)", "Mixolydian :)", "Aolian (Minor) :(", "Locrian :/", "Pentatonic :)", "Pentatonic :(", "Blues :)", "Blues :(", "Bebop Dominant :)", "Bebop Dorian :(", "Bebop Major :)", "Bebop Melodic :(", "Bebop Harmonic :(", "Chromatic"];
     Config.scaleFlags = [
         [true, false, true, false, true, true, false, true, false, true, false, true],
 		[true, false, true, true, false, true, false, true, false, true, true, false],
@@ -200,6 +200,15 @@ var nerdbox;
 		[true, false, true, false, true, true, false, true, false, true, true, false],
 		[true, false, true, true, false, true, false, true, true, false, true, false],
 		[true, true, false, true, false, true, true, false, true, false, true, false],
+		[true, false, true, false, true, false, false, true, false, true, false, false],
+		[true, false, false, true, false, true, false, true, false, false, true, false],
+		[true, false, true, true, true, false, false, true, false, true, false, false],
+		[true, false, false, true, false, true, true, true, false, false, true, false],
+		[true, false, true, false, true, true, false, true, false, true, true, true],
+		[true, false, true, true, true, true, false, true, false, true, true, false],
+		[true, false, true, false, true, true, false, true, true, true, false, true],
+		[true, false, true, true, false, true, false, true, true, true, false, true],
+		[true, false, true, true, false, true, false, true, true, false, true, true],
         [true, true, true, true, true, true, true, true, true, true, true, true],
     ];
     Config.pianoScaleFlags = [true, false, true, false, true, true, false, true, false, true, false, true];
@@ -217,10 +226,10 @@ var nerdbox;
     Config.patternsPerChannelMax = 64;
     Config.instrumentsPerChannelMin = 1;
     Config.instrumentsPerChannelMax = 10;
-    Config.partNames = ["÷2 (quavers)", "÷3 (triplets)", "÷4 (semiquavers)", "÷6 (sextuplets)", "÷8 (demisemiquavers)", "÷12 (two sextuplets)", "÷16 (hemidemisemiquavers)", "÷24 (four sextuplets)"];
-    Config.partCounts = [2, 3, 4, 6, 8, 12, 16, 24];
-    Config.waveNames = ["triangle", "square", "pulse wide", "pulse narrow", "sawtooth", "double saw", "double pulse", "spiky", "plateau"];
-    Config.waveVolumes = [1.0, 0.5, 0.5, 0.5, 0.65, 0.5, 0.4, 0.4, 0.94];
+    Config.partNames = ["÷2 (quavers)", "÷3 (triplets)", "÷4 (semiquavers)", "÷5 (quintuplets)", "÷6 (sextuplets)", "÷7 (septuplet)", "÷8 (demisemiquavers)", "÷9 (nontuplet)", "÷12 (duodectuplets)", "÷16 (hemidemisemiquavers)", "÷24 (quattuorvigintuplets)", "÷32 (semihemidemisemiquavers)", "÷nothing (freehand)"];
+    Config.partCounts = [2, 3, 4, 5, 6, 7, 8, 9, 12, 16, 24, 32, 999];
+    Config.waveNames = ["triangle", "square", "pulse wide", "pulse narrow", "sawtooth", "double saw", "double pulse", "spiky", "plateau", "unnamed 1", "unnamed 2"];
+    Config.waveVolumes = [1.0, 0.5, 0.5, 0.5, 0.65, 0.5, 0.4, 0.4, 0.94, 0.3, 1.0];
     Config.drumNames = ["retro", "white", "clang", "buzz", "hollow"];
     Config.drumVolumes = [0.25, 1.0, 0.4, 0.3, 1.5];
     Config.drumPitchRoots = [69, 69, 69, 69, 96];
@@ -242,10 +251,10 @@ var nerdbox;
     Config.chorusHarmonizes = [false, false, false, false, false, false, false, false, true];
     Config.volumeNames = ["loudest", "loud", "medium", "quiet", "quietest", "mute"];
     Config.volumeValues = [0.0, 0.5, 1.0, 1.5, 2.0, -1.0];
-    Config.pitchChannelColorsDim = ["#139620", "#109986", "#127296", "#6038a5", "#a52491", "#af3221", "#ad6e0f", "#a7b512", "#1cb276"];
-    Config.pitchChannelColorsBright = ["#25ff3a", "#1cffe0", "#21c3ff", "#9456ff", "#ff35e0", "#ff4a32", "#ffa216", "#ebff19", "#28ffa9"];
-    Config.pitchNoteColorsDim = ["#139620", "#109986", "#127296", "#6038a5", "#a52491", "#af3221", "#ad6e0f", "#a7b512", "#1cb276"];
-    Config.pitchNoteColorsBright = ["#25ff3a", "#1cffe0", "#21c3ff", "#9456ff", "#ff35e0", "#ff4a32", "#ffa216", "#ebff19", "#28ffa9"];
+    Config.pitchChannelColorsDim = ["#139620", "#109986", "#127296", "#6038a5", "#a52491", "#af3221", "#ad6e0f", "#a7b512", "#70ad1b"];
+    Config.pitchChannelColorsBright = ["#25ff3a", "#1cffe0", "#21c3ff", "#9456ff", "#ff35e0", "#ff4a32", "#ffa216", "#ebff19", "#a4ff26"];
+    Config.pitchNoteColorsDim = ["#139620", "#109986", "#127296", "#6038a5", "#a52491", "#af3221", "#ad6e0f", "#a7b512", "#70ad1b"];
+    Config.pitchNoteColorsBright = ["#25ff3a", "#1cffe0", "#21c3ff", "#9456ff", "#ff35e0", "#ff4a32", "#ffa216", "#ebff19", "#a4ff26"];
     Config.drumChannelColorsDim = ["#68706f", "#665c64", "#60605a"];
     Config.drumChannelColorsBright = ["#a6b2b1", "#a396a1", "#afaea3"];
     Config.drumNoteColorsDim = ["#68706f", "#665c64", "#60605a"];
@@ -292,6 +301,8 @@ var nerdbox;
         Config._centerWave([1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, 1.0, 1.0, 1.0, 1.0, -1.0, -1.0, -1.0, -1.0]),
         Config._centerWave([1.0, -1.0, 1.0, -1.0, 1.0, 0.0]),
         Config._centerWave([0.0, 0.2, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.95, 0.9, 0.85, 0.8, 0.7, 0.6, 0.5, 0.4, 0.2, 0.0, -0.2, -0.4, -0.5, -0.6, -0.7, -0.8, -0.85, -0.9, -0.95, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -1.0, -0.95, -0.9, -0.85, -0.8, -0.7, -0.6, -0.5, -0.4, -0.2]),
+		Config._centerWave([0.2 , 0.8 / 0.2, 0.7, -0.4, -1.0, 0.5, -0.5 / 0.6]),
+		Config._centerWave([2.0 , 5.0 / 55.0 , -9.0 , 6.5 / 6.5 , -55.0, 18.5 / -26.0]),
     ];
     Config._drumWaves = [null, null, null, null, null];
     nerdbox.Config = Config;
