@@ -6445,7 +6445,7 @@ var nerdbox;
             ]);
             this._scaleDropDown = buildOptions(select({}), nerdbox.Config.scaleNames);
             this._keyDropDown = buildOptions(select({}), nerdbox.Config.keyNames);
-            this._tempoSlider = input({ style: "margin: 0px;", type: "range", min: "0", max: nerdbox.Config.tempoSteps - 1, value: "7", step: "1" });
+            this._tempoSlider = input({ style: "margin: 0px;", type: "range", min: "0", max: nerdbox.Config.tempoSteps - 1, value: "7", step: "0.5" });
             this._reverbSlider = input({ style: "margin: 0px;", type: "range", min: "0", max: nerdbox.Config.reverbRange - 1, value: "0", step: "1" });
             this._partDropDown = buildOptions(select({}), nerdbox.Config.partNames);
             this._instrumentDropDown = select({});
